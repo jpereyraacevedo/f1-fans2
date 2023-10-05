@@ -1,0 +1,256 @@
+/* Fuente descargada e importada */
+/* @import url('../fonts/Poppins-Regular.ttf'); */
+
+/* Reset de navegadores */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Estilos generales */
+
+body {
+  font-family: "Lato", sans-serif;
+  color: #15151d;
+}
+
+ul {
+  list-style-type: none;
+}
+
+ul li {
+  display: inline-block;
+  margin: 10px;
+}
+
+a {
+  text-decoration: none;
+  font-weight: 700;
+  color: #fff;
+}
+
+h3 {
+  text-decoration: underline;
+}
+
+footer {
+  background-color: #ff1e00;
+  color: #9baebc;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Estilos header */
+
+header {
+  background-color: #ff1e00;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 90px;
+  padding: 0 10px;
+}
+
+.logo {
+  width: 150px;
+}
+
+/* Estilos main */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 15px 0px;
+}
+
+/* Estilos contenido principal */
+
+.title {
+  text-align: center;
+  margin: 15px 0;
+}
+
+.title-text {
+  padding: 10px;
+}
+
+.subtitles {
+  margin: 10px 0;
+}
+
+/* Seccion ultima carrera */
+
+.weekend-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 15px 0;
+  max-width: 1080px;
+  padding: 5px;
+}
+
+.weekend-img {
+  display: inline-block;
+  max-height: 100%;
+  max-width: 60%;
+}
+
+.weekend-text {
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  margin: 15px;
+  padding: 15px;
+  border-top: solid 10px #ff1e00;
+  border-right: solid 10px #ff1e00;
+  border-radius: 0 40px 0 40px;
+}
+
+.weekend-text p {
+  margin-top: 10px;
+}
+
+/* Seccion novedades */
+.news {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 15px 0;
+}
+
+.news-cards {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.img {
+  width: 100%;
+  height: 220px;
+}
+
+.card {
+  width: 350px;
+  border: 1px solid #9baebc;
+  /* Border radius sirve para redondear los bordes, se pueden utilizar todas las medidas relativas y absolutas que vimos en clases */
+  border-radius: 0 0 1% 1%;
+  margin: 5px;
+}
+
+.card p, h3, h4 {
+  text-align: center;
+  /* El primer valor (se puede aplicar en margin padding) aplica el valor en vertical (top y bottom) y el segundo trabaja en horizontal (right y left) */
+  margin: 5px 3px;
+}
+
+/* Estilos para la seccion de videos */
+
+.iframe-video {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 15px 0;
+}
+
+.video {
+  width: 600px;
+  height: 400px;
+}
+
+/* Estilos galeria */
+
+.ejemplo-grid {
+  display: grid;
+  height: 100vh;
+  grid-template-rows: 90px auto 36px;
+}
+
+.galeria {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.galeria section {
+  width: 450px;
+}
+
+.img-galeria {
+  width: 100%;
+  height: 400px;
+}
+
+
+
+
+
+/* Breakpoints para trabajar mediaqueries*/
+/*
+  para telefonos moviles vertical: 480 a 576px
+  para telefonos moviles horizontal: 577px a 767px
+  para tablets: 768px a 1200px
+  para escritorio +1200px
+*/
+
+
+
+
+@media (min-width: 480px) and (max-width: 576px) {
+
+  header {
+    height: auto;
+  }
+
+  ul li {
+    display: block;
+  }
+
+  .title {
+    font-size: 1.8em;
+    padding: 10px;
+  }
+
+  /* White space es una propiedad para que no se separen las palabras que tengamos en un span al momento de hacer saltos de linea */
+
+  /* .no-separar {
+    white-space: nowrap;
+  } */
+
+  .weekend-info {
+    flex-direction: column;
+  }
+
+  .weekend-text {
+    border-top: none;
+    border-right: none;
+    border-bottom: solid 10px #ff1e00;
+    border-left: solid 10px #ff1e00;
+  }
+
+  .weekend-img {
+    max-width: 100%;
+  }
+
+  .news-cards {
+    flex-direction: column;
+  }
+
+  .video {
+    width: 460px;
+  }
+
+  /* Seccion de galeria */
+  .ejemplo-grid {
+    grid-template-rows: 120px auto 36px;
+  }
+}
